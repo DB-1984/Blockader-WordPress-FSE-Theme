@@ -1,0 +1,15 @@
+{
+  "name": "blockader",
+  "version": "1.0.0",
+  "description": "Blockader FSE Block Theme",
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "scripts": {
+    "build": "wp-scripts build",
+    "start": "wp-scripts start"
+  },
+  "dependencies": {
+    "@wordpress/scripts": "^32.0.0"
+  }
+}
