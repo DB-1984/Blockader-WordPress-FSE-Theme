@@ -31,6 +31,7 @@ const resolveThemeFileUrl = (url) => {
 export default function Edit({ attributes, setAttributes }) {
   const {
     heading,
+    headingColor,
     content,
     buttonText,
     buttonUrl,
@@ -60,6 +61,11 @@ export default function Edit({ attributes, setAttributes }) {
         <PanelColorSettings
           title="Button Colours"
           colorSettings={[
+            {
+              value: headingColor,
+              onChange: (value) => setAttributes({ headingColor: value }),
+              label: "Heading text",
+            },
             {
               value: buttonBackgroundColor,
               onChange: (value) =>
@@ -95,6 +101,9 @@ export default function Edit({ attributes, setAttributes }) {
               value={heading}
               onChange={(value) => setAttributes({ heading: value })}
               className="blockader-banner__heading"
+              style={{
+                color: headingColor || undefined,
+              }}
             />
 
             <RichText

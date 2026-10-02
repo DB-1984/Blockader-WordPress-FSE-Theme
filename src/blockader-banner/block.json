@@ -6,7 +6,12 @@
   "description": "A split hero banner with content and image.",
   "category": "design",
   "icon": "align-pull-left",
-  "keywords": ["hero", "banner", "split", "cta"],
+  "keywords": [
+    "hero",
+    "banner",
+    "split",
+    "cta"
+  ],
   "supports": {
     "html": false,
     "color": {
@@ -16,12 +21,22 @@
     "spacing": {
       "margin": true,
       "padding": true
+    },
+    "typography": {
+      "fontSize": true,
+      "lineHeight": true,
+      "fontWeight": true,
+      "letterSpacing": true
     }
   },
   "attributes": {
     "heading": {
       "type": "string",
       "default": "Build Loud."
+    },
+    "headingColor": {
+      "type": "string",
+      "default": ""
     },
     "content": {
       "type": "string",

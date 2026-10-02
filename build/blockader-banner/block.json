@@ -21,12 +21,22 @@
     "spacing": {
       "margin": true,
       "padding": true
+    },
+    "typography": {
+      "fontSize": true,
+      "lineHeight": true,
+      "fontWeight": true,
+      "letterSpacing": true
     }
   },
   "attributes": {
     "heading": {
       "type": "string",
       "default": "Build Loud."
+    },
+    "headingColor": {
+      "type": "string",
+      "default": ""
     },
     "content": {
       "type": "string",

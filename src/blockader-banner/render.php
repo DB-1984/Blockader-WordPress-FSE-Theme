@@ -2,7 +2,7 @@
 
 $image_url = $attributes['imageUrl'] ?? '';
 
-if ( function_exists( 'str_starts_with' ) && str_starts_with( $image_url, 'file:./' ) ) {
+if (function_exists('str_starts_with') && str_starts_with($image_url, 'file:./')) {
 	$image_url = str_replace(
 		'file:./',
 		get_theme_file_uri() . '/',
@@ -14,12 +14,13 @@ $button_background_color       = $attributes['buttonBackgroundColor'] ?? '';
 $button_text_color             = $attributes['buttonTextColor'] ?? '';
 $button_hover_background_color = $attributes['buttonHoverBackgroundColor'] ?? '';
 $button_hover_text_color       = $attributes['buttonHoverTextColor'] ?? '';
+$heading_color = $attributes['headingColor'] ?? '';
 
 $custom_styles =
-	'--banner-button-bg:' . esc_attr( $button_background_color ?: 'var(--wp--preset--color--contrast)' ) . ';' .
-	'--banner-button-text:' . esc_attr( $button_text_color ?: 'var(--wp--preset--color--base)' ) . ';' .
-	'--banner-button-hover-bg:' . esc_attr( $button_hover_background_color ?: 'var(--wp--preset--color--accent)' ) . ';' .
-	'--banner-button-hover-text:' . esc_attr( $button_hover_text_color ?: 'var(--wp--preset--color--contrast)' ) . ';';
+	'--banner-button-bg:' . esc_attr($button_background_color ?: 'var(--wp--preset--color--contrast)') . ';' .
+	'--banner-button-text:' . esc_attr($button_text_color ?: 'var(--wp--preset--color--base)') . ';' .
+	'--banner-button-hover-bg:' . esc_attr($button_hover_background_color ?: 'var(--wp--preset--color--accent)') . ';' .
+	'--banner-button-hover-text:' . esc_attr($button_hover_text_color ?: 'var(--wp--preset--color--contrast)') . ';';
 
 $wrapper_attributes = get_block_wrapper_attributes(
 	array(
@@ -36,17 +37,21 @@ $wrapper_attributes = get_block_wrapper_attributes(
 
 		<div class="blockader-banner__content">
 
-			<h1 class="blockader-banner__heading">
-				<?php echo wp_kses_post( $attributes['heading'] ?? 'Build Loud.' ); ?>
+			<h1
+				class="blockader-banner__heading"
+				<?php if ($heading_color) : ?>
+				style="color:<?php echo esc_attr($heading_color); ?>;"
+				<?php endif; ?>>
+				<?php echo wp_kses_post($attributes['heading'] ?? 'Build Loud.'); ?>
 			</h1>
 
 			<p class="blockader-banner__text">
-				<?php echo wp_kses_post( $attributes['content'] ?? 'A stripped-back WordPress block theme with custom blocks and bold typography.' ); ?>
+				<?php echo wp_kses_post($attributes['content'] ?? 'A stripped-back WordPress block theme with custom blocks and bold typography.'); ?>
 			</p>
 
 			<div class="blockader-banner__actions">
-				<a class="blockader-banner__button" href="<?php echo esc_url( $attributes['buttonUrl'] ?? '#' ); ?>">
-					<span><?php echo esc_html( $attributes['buttonText'] ?? 'Learn More' ); ?></span>
+				<a class="blockader-banner__button" href="<?php echo esc_url($attributes['buttonUrl'] ?? '#'); ?>">
+					<span><?php echo esc_html($attributes['buttonText'] ?? 'Learn More'); ?></span>
 				</a>
 			</div>
 
@@ -54,9 +59,8 @@ $wrapper_attributes = get_block_wrapper_attributes(
 
 		<div class="blockader-banner__media">
 			<img
-				src="<?php echo esc_url( $image_url ); ?>"
-				alt="<?php echo esc_attr( $attributes['imageAlt'] ?? '' ); ?>"
-			/>
+				src="<?php echo esc_url($image_url); ?>"
+				alt="<?php echo esc_attr($attributes['imageAlt'] ?? ''); ?>" />
 		</div>
 
 	</div>
