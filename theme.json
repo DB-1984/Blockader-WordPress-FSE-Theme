@@ -135,7 +135,7 @@
     },
 
     "spacing": {
-      "blockGap": "1rem",
+      "blockGap": "2rem",
       "padding": {
         "top": "0px",
         "right": "1rem",
