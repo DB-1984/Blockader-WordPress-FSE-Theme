@@ -1,0 +1,136 @@
+/* LIVE REST SEARCH */
+.wp-block-blockader-live-rest-search {
+    display: block;
+    max-width: 600px;
+    margin-inline: auto;
+  }
+  
+  .wp-block-blockader-live-rest-search.alignleft {
+    margin-inline: 0 auto;
+    float: none;
+  }
+  
+  .wp-block-blockader-live-rest-search.alignright {
+    margin-inline: auto 0;
+    max-width: 600px;
+    float: none;
+  }
+  
+  .wp-block-blockader-live-rest-search.aligncenter {
+    margin-inline: auto;
+  }
+  
+  /* Heading */
+  .live-rest-search-block h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  /* Search input wrapper */
+  .live-rest-search-input-wrapper {
+    position: relative;
+    margin-bottom: 0;
+  }
+  
+  /* Search input */
+  .live-rest-search-input {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    font-family: var(--wp--preset--font-family--inter);
+    font-size: var(--wp--preset--font-size--base);
+    font-weight: 600;
+    border: 3px solid var(--wp--preset--color--contrast);
+    background-color: transparent;
+    color: var(--wp--preset--color--contrast);
+    outline: none;
+    box-sizing: border-box;
+  }
+  
+  .live-rest-search-input::placeholder {
+    color: var(--wp--preset--color--grey);
+    font-weight: 400;
+  }
+  
+  .live-rest-search-input:focus {
+    background-color: var(--wp--preset--color--contrast);
+    color: var(--wp--preset--color--base);
+  }
+  
+  .live-rest-search-input:focus::placeholder {
+    color: var(--wp--preset--color--grey);
+  }
+  
+  /* Results container */
+  .live-rest-search-results {
+    border-inline: 3px solid var(--wp--preset--color--contrast);
+    margin-top: 0;
+  }
+  
+  .live-rest-search-results-inner {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Individual result */
+  .live-rest-search-result {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-bottom: 1px solid var(--wp--preset--color--contrast);
+    color: var(--wp--preset--color--contrast);
+    transition: background-color 0.1s ease;
+  }
+  
+  .live-rest-search-result:hover {
+    background-color: var(--wp--preset--color--base);
+    color: var(--wp--preset--color--contrast);
+  }
+  
+  .result-type {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.5;
+    min-width: 40px;
+  }
+  
+  .result-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    flex: 1;
+  }
+  
+  .result-title {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  
+  .result-excerpt {
+    font-size: 0.8rem;
+    font-weight: 400;
+    opacity: 0.7;
+  }
+  
+  /* States */
+  .live-rest-search-loading,
+  .live-rest-search-empty,
+  .live-rest-search-error,
+  .live-rest-search-preview {
+    padding: 1rem 1.5rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--wp--preset--color--grey);
+    margin: 0;
+  }
