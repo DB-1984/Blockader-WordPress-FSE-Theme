@@ -1,10 +1,8 @@
 {
-  "$schema": "https://schemas.wp.org/wp/6.9/theme.json",
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
   "version": 3,
-
   "settings": {
     "appearanceTools": true,
-
     "color": {
       "palette": [
         {
@@ -54,11 +52,9 @@
       "customGradient": false,
       "defaultPalette": false
     },
-
     "typography": {
       "customFontSize": true,
       "lineHeight": true,
-
       "fontSizes": [
         {
           "slug": "sm",
@@ -82,29 +78,41 @@
         },
         {
           "slug": "hero",
-          "size": "min(25vw, 45cqi)",
+          "size": "60cqi",
           "name": "Hero"
         }
       ],
-
       "fontFamilies": [
         {
-          "fontFamily": "Inter, system-ui, sans-serif",
-          "name": "Inter",
-          "slug": "inter",
+          "fontFamily": "Chivo, system-ui, sans-serif",
+          "name": "Chivo",
+          "slug": "Chivo",
           "fontFace": [
             {
-              "fontFamily": "Inter",
+              "fontFamily": "Chivo",
               "fontWeight": "100 900",
               "fontStyle": "normal",
               "fontDisplay": "swap",
-              "src": ["file:./assets/fonts/InterVariable.woff2"]
+              "src": ["file:./assets/fonts/Chivo.woff2"]
+            }
+          ]
+        },
+        {
+          "fontFamily": "Infister, system-ui, sans-serif",
+          "name": "Infister",
+          "slug": "Infister",
+          "fontFace": [
+            {
+              "fontFamily": "Infister",
+              "fontWeight": "100 900",
+              "fontStyle": "normal",
+              "fontDisplay": "swap",
+              "src": ["file:./assets/fonts/InfisterRegular.woff2"]
             }
           ]
         }
       ]
     },
-
     "spacing": {
       "margin": true,
       "padding": true,
@@ -117,23 +125,19 @@
         }
       ]
     },
-
     "layout": {
-      "contentSize": "720px",
+      "contentSize": "800px",
       "wideSize": "1200px"
     }
   },
-
   "styles": {
     "typography": {
-      "fontFamily": "var(--wp--preset--font-family--inter)"
+      "fontFamily": "var(--wp--preset--font-family--chivo)"
     },
-
     "color": {
       "background": "var(--wp--preset--color--charcoal)",
       "text": "var(--wp--preset--color--base)"
     },
-
     "spacing": {
       "blockGap": "2rem",
       "padding": {
@@ -143,23 +147,21 @@
         "left": "1rem"
       }
     },
-
     "blocks": {
       "core/paragraph": {
         "typography": {
           "fontSize": "1rem",
-          "lineHeight": "1.7"
+          "lineHeight": "1.7",
+          "fontWeight": "200"
         }
       }
     },
-
     "elements": {
       "link": {
         "color": {
           "text": "var(--wp--preset--color--neon)"
         }
       },
-
       "h1": {
         "color": {
           "text": "var(--wp--preset--color--neon)"
@@ -170,7 +172,6 @@
           "fontWeight": "800"
         }
       },
-
       "h2": {
         "color": {
           "text": "var(--wp--preset--color--neon)"
@@ -181,7 +182,6 @@
           "fontWeight": "800"
         }
       },
-
       "h3": {
         "color": {
           "text": "var(--wp--preset--color--neon)"
@@ -192,7 +192,6 @@
           "fontWeight": "700"
         }
       },
-
       "h4": {
         "color": {
           "text": "var(--wp--preset--color--neon)"
@@ -203,7 +202,6 @@
           "fontWeight": "700"
         }
       },
-
       "h5": {
         "color": {
           "text": "var(--wp--preset--color--neon)"
@@ -216,7 +214,6 @@
       }
     }
   },
-
   "templateParts": [
     {
       "area": "header",
