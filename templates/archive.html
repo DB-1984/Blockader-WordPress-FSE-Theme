@@ -1,0 +1,83 @@
+<!-- wp:template-part {"slug":"main-nav","area":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","align":"full","className":"blockader-archive","layout":{"type":"constrained"}} -->
+<main class="wp-block-group alignfull blockader-archive">
+
+	<!-- wp:group {"align":"wide","className":"blockader-archive__header","layout":{"type":"constrained"}} -->
+	<div class="wp-block-group alignwide blockader-archive__header">
+
+		<!-- wp:paragraph {"className":"blockader-eyebrow"} -->
+		<p class="blockader-eyebrow">Archive / 01</p>
+		<!-- /wp:paragraph -->
+
+		<!-- wp:query-title {"type":"archive","showPrefix":false,"className":"blockader-archive__title"} /-->
+
+		<!-- wp:paragraph {"className":"blockader-archive__intro"} -->
+		<p class="blockader-archive__intro">
+			Ideas, notes and practical builds covering WordPress, development and design.
+		</p>
+		<!-- /wp:paragraph -->
+
+		<!-- wp:categories {"showPostCounts":false,"className":"blockader-archive__filters"} /-->
+
+	</div>
+	<!-- /wp:group -->
+
+	<!-- wp:query {"query":{"perPage":10,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true},"align":"wide","className":"blockader-archive__query"} -->
+	<div class="wp-block-query alignwide blockader-archive__query">
+
+		<!-- wp:post-template {"layout":{"type":"grid","columnCount":3},"className":"blockader-archive__grid"} -->
+
+			<!-- wp:group {"tagName":"article","className":"blockader-post-card","layout":{"type":"constrained"}} -->
+			<article class="wp-block-group blockader-post-card">
+
+				<!-- wp:post-featured-image {"isLink":true,"aspectRatio":"4/3","className":"blockader-post-card__image"} /-->
+
+				<!-- wp:group {"className":"blockader-post-card__content","layout":{"type":"constrained"}} -->
+				<div class="wp-block-group blockader-post-card__content">
+
+					<!-- wp:group {"className":"blockader-post-card__meta","layout":{"type":"flex","flexWrap":"wrap"}} -->
+					<div class="wp-block-group blockader-post-card__meta">
+
+						<!-- wp:post-terms {"term":"category"} /-->
+
+						<!-- wp:post-date {"format":"j M Y"} /-->
+
+					</div>
+					<!-- /wp:group -->
+
+					<!-- wp:post-title {"isLink":true,"className":"blockader-post-card__title"} /-->
+
+					<!-- wp:post-excerpt {"moreText":"","excerptLength":24,"className":"blockader-post-card__excerpt"} /-->
+
+					<!-- wp:read-more {"content":"Read article ↗","className":"blockader-post-card__link"} /-->
+
+				</div>
+				<!-- /wp:group -->
+
+			</article>
+			<!-- /wp:group -->
+
+		<!-- /wp:post-template -->
+
+		<!-- wp:query-no-results -->
+			<!-- wp:paragraph {"className":"blockader-archive__empty"} -->
+			<p class="blockader-archive__empty">
+				There are no articles here yet.
+			</p>
+			<!-- /wp:paragraph -->
+		<!-- /wp:query-no-results -->
+
+		<!-- wp:query-pagination {"paginationArrow":"arrow","className":"blockader-archive__pagination","layout":{"type":"flex","justifyContent":"space-between"}} -->
+			<!-- wp:query-pagination-previous {"label":"Previous"} /-->
+			<!-- wp:query-pagination-numbers /-->
+			<!-- wp:query-pagination-next {"label":"Next"} /-->
+		<!-- /wp:query-pagination -->
+
+	</div>
+	<!-- /wp:query -->
+
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"site-footer","area":"footer","tagName":"footer"} /-->

@@ -1,0 +1,61 @@
+<!-- wp:template-part {"slug":"main-nav","theme":"blockader","tagName":"header","area":"header","className":"header"} /-->
+
+<!-- wp:group {"tagName":"main","align":"full","className":"blockader-blog","layout":{"type":"constrained"}} -->
+<main class="wp-block-group alignfull blockader-blog">
+
+	<!-- wp:group {"align":"wide","className":"blockader-blog__header","layout":{"type":"constrained"}} -->
+	<div class="wp-block-group alignwide blockader-blog__header">
+
+
+		<!-- wp:heading {"level":1} -->
+		<h1 class="wp-block-heading">Blog</h1>
+		<!-- /wp:heading -->
+
+	</div>
+	<!-- /wp:group -->
+
+	<!-- wp:query {"query":{"perPage":10,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true},"align":"wide","className":"blockader-blog__query"} -->
+	<div class="wp-block-query alignwide blockader-blog__query">
+
+		<!-- wp:post-template {"layout":{"type":"grid","columnCount":3}} -->
+
+			<!-- wp:group {"tagName":"article","className":"blockader-post-card","layout":{"type":"constrained"}} -->
+			<article class="wp-block-group blockader-post-card">
+
+				<!-- wp:post-featured-image {"isLink":true,"aspectRatio":"4/3"} /-->
+
+				<!-- wp:post-terms {"term":"category"} /-->
+
+				<!-- wp:post-title {"isLink":true} /-->
+
+				<!-- wp:post-date {"format":"j F Y"} /-->
+
+				<!-- wp:post-excerpt {"moreText":"","excerptLength":24} /-->
+
+				<!-- wp:read-more {"content":"Read article ↗"} /-->
+
+			</article>
+			<!-- /wp:group -->
+
+		<!-- /wp:post-template -->
+
+		<!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"space-between"}} -->
+			<!-- wp:query-pagination-previous /-->
+			<!-- wp:query-pagination-numbers /-->
+			<!-- wp:query-pagination-next /-->
+		<!-- /wp:query-pagination -->
+
+		<!-- wp:query-no-results -->
+			<!-- wp:paragraph -->
+			<p>No posts were found.</p>
+			<!-- /wp:paragraph -->
+		<!-- /wp:query-no-results -->
+
+	</div>
+	<!-- /wp:query -->
+
+
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"site-footer","theme":"blockader","tagName":"footer","area":"footer","className":"footer"} /-->

@@ -1,0 +1,387 @@
+/* MAIN THEME STYLES */
+.has-hero-font-size {
+  line-height: 0.5;
+  font-weight: 900;
+  font-family: var(--wp--preset--font-family--anurati);
+  -webkit-text-stroke-width: 4cqi;
+  letter-spacing: -1rem;
+  mix-blend-mode: difference;
+}
+
+body {
+  background-color: #fff;
+  background-image: url("../images/blocks.svg");
+  background-repeat: repeat;
+  background-size: 2000px 400px;
+}
+
+h2.has-hero-font-size {
+  margin-block: .25em;
+}
+
+p.hero-tagline {
+  line-height: 2;
+  padding: 1em;
+  clip-path: polygon(20% 0%, 80% 0%, 100% 0%, 100% 80%, 80% 100%, 0% 100%, 0% 86%, 0% 00%);
+  mix-blend-mode: difference;
+}
+
+h3.wp-block-heading h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.front-hero .wp-block-column {
+  container-type: inline-size;
+}
+
+.wp-block-post-title :where(a) {
+  font-weight: 700;
+  line-height: 1;
+}
+
+h2 {
+  text-wrap: balance;
+}
+
+* strong{
+  font-weight: 700;
+}
+
+.hero-image {
+  padding: 2vw;
+}
+
+.front-page-hero {
+  background-image: url("../images/u5Ppy.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-block: 2em;
+  margin-top: 0px!important;
+}
+
+.wp-block-quote,
+.wp-block-pullquote {
+  margin: 2rem 0;
+  padding: 1.5rem 2rem;
+  border-left: 4px solid var(--wp--preset--color--contrast);
+  font-style: italic;
+}
+
+.wp-block-query .wp-block-post-title {
+  font-size: clamp(2.4rem, 5vw, 4.6rem) !important;
+}
+
+.blockader-page {
+  padding-inline: 5vw;
+}
+
+.blockader-single {
+  padding-block: 4rem;
+}
+
+.wp-block-site-title {
+  font-size: 1.4rem;
+}
+
+.single-article-header {
+  border-bottom: 0.4rem solid currentColor;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+
+.single-title {
+  font-size: clamp(3rem, 10vw, 10rem);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+  max-width: 12ch;
+}
+
+.single-meta {
+  gap: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.single-featured-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.single-content {
+  max-width: 760px;
+  margin-inline: auto;
+  padding-block: 2rem;
+}
+
+.single-footer {
+  border-top: 0.25rem solid currentColor;
+  padding-top: 2rem;
+}
+
+.single-category {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.single-category a {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background-color: var(--wp--preset--color--contrast);
+  color: var(--wp--preset--color--base);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 1.5;
+}
+
+.single-category a:hover {
+  background-color: var(--wp--preset--color--base);
+  color: var(--wp--preset--color--contrast);
+}
+
+.blockader-page-single {
+  padding-top: 0;
+  padding-bottom: 4rem;
+}
+
+.page-header {
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+.page-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.page-featured-image {
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.page-featured-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.page-content {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.page-content p {
+  line-height: 1.75;
+  max-width: 65ch;
+}
+
+/* NAV */
+
+.wp-block-navigation__responsive-container.is-menu-open
+.wp-block-navigation__submenu-container {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+.wp-block-navigation__responsive-container.is-menu-open
+.wp-block-navigation__submenu-container
+.wp-block-navigation-item__content {
+  padding: 0.25rem 0 !important;
+  margin: 0 !important;
+}
+
+.header, .footer{
+  padding-inline: 2vw;
+}
+
+/* Hide default burger icon + site tagline in header */
+.wp-block-navigation__responsive-container-open svg,
+.header .wp-block-site-tagline {
+  display: none !important;
+}
+
+/* Post navigation hover */
+.wp-block-post-navigation-link a:hover {
+  color: var(--wp--preset--color--contrast);
+  transform: translate(-2px, -2px);
+}
+
+/* Custom burger icon */
+.wp-block-navigation__responsive-container-open::before {
+  content: "";
+  display: block;
+  width: 2rem;
+  height: 0.5rem;
+  border-top: 4px solid currentColor;
+  border-bottom: 4px solid currentColor;
+  transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.wp-block-navigation__responsive-container-open:hover::before {
+  height: 0.75rem;
+}
+
+.wp-block-navigation__responsive-container-open {
+  color: currentColor;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.wp-block-navigation__responsive-container-open svg {
+  fill: currentColor;
+}
+
+/* Modal spacing */
+div#modal-1 {
+  padding: 4vw;
+}
+
+/* Full-screen overlay */
+.wp-block-navigation__responsive-container.is-menu-open,
+.wp-block-navigation__responsive-container.has-modal-open {
+  background-color: var(--wp--preset--color--contrast) !important;
+  color: var(--wp--preset--color--base) !important;
+  padding: 2rem;
+}
+
+.wp-block-navigation__responsive-container.is-menu-open {
+  background: rgb(0 0 0 / 0.75) !important;
+  backdrop-filter: blur(8px);
+}
+
+/* Close button */
+.wp-block-navigation__responsive-container-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.wp-block-navigation__responsive-container-close svg {
+  fill: currentColor;
+  width: 2rem;
+  height: 2rem;
+}
+
+/* -------------------------
+   TOP-LEVEL NAV ITEMS
+------------------------- */
+
+.wp-block-navigation__responsive-container.is-menu-open
+> .wp-block-navigation__responsive-close
+.wp-block-navigation__responsive-container-content
+> .wp-block-navigation
+> .wp-block-navigation-item {
+  border-top: 3px solid currentColor;
+  display: block;
+  width: 100%;
+}
+
+.wp-block-navigation__responsive-container.is-menu-open
+> .wp-block-navigation__responsive-close
+.wp-block-navigation__responsive-container-content
+> .wp-block-navigation
+> .wp-block-navigation-item
+> .wp-block-navigation-item__content {
+  display: block;
+  padding: 1rem 0;
+  border: none;
+  color: currentColor !important;
+
+  font-size: var(--wp--preset--font-size--xl);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+}
+
+/* -------------------------
+   SUBMENUS
+------------------------- */
+
+.wp-block-navigation__responsive-container.is-menu-open
+.wp-block-navigation__submenu-container {
+  position: static;
+  width: 100%;
+  background: transparent;
+  border: none;
+
+  padding: 0;
+  margin: 0 0 1rem;
+  text-align: right;
+}
+
+/* Nested items */
+.wp-block-navigation__responsive-container.is-menu-open
+.wp-block-navigation__submenu-container
+.wp-block-navigation-item {
+  display: block;
+  width: 100%;
+  border: none;
+}
+
+/* Nested links */
+.wp-block-navigation__responsive-container.is-menu-open
+.wp-block-navigation__submenu-container
+.wp-block-navigation-item__content,
+.wp-block-navigation__responsive-container.is-menu-open
+.wp-block-navigation__submenu-container
+.wp-block-navigation-item__label {
+  font-size: clamp(1rem, 2vw, 1.5rem) !important;
+  font-weight: 400 !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  opacity: 0.65;
+}
+
+/* No trailing divider */
+.wp-block-navigation__responsive-container.is-menu-open
+.wp-block-navigation__submenu-container
+.wp-block-navigation-item {
+  border: 0 !important;
+}
+
+/* Submenu chevron */
+.wp-block-navigation__responsive-container.is-menu-open
+.wp-block-navigation__submenu-icon svg {
+  stroke: currentColor;
+}
+
+/* Post navigation links */
+.wp-block-post-navigation-link a,
+.wp-block-post-navigation-link a:visited {
+  display: inline-block;
+  color: var(--wp--preset--color--contrast);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 0.75rem 1rem;
+  border: 3px solid currentColor;
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease,
+    transform 0.15s ease;
+}
+
+.entry-content{
+  padding: 1em;
+}
+
+.wp-block-group-is-layout-constrained:not(.front-page-hero){
+    background: rgba(255, 255, 255, 0.86);
+}
+
+.blockader-post-card {
+  background: #ffffffe0;
+  padding-bottom: 2em;
+}

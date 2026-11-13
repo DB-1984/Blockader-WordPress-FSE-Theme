@@ -1,0 +1,107 @@
+/* ASSOC. POSTS/PAGES */
+.associated-posts-block {
+    border: 9px solid black;
+    transition: box-shadow 0.15s ease;
+    padding: 2rem;
+    background: #1f1f1f;
+    transition: all, 0.3s ease-in-out;
+  }
+  
+  .associated-posts-block:hover {
+    transform: translateY(-10px)
+  }
+  
+  .associated-posts-block h3 {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  
+  .associated-posts-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .associated-posts-item a {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+  }
+  
+  .associated-posts-item .post-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    flex: 1;
+  }
+  
+  .associated-posts-item .post-type {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.6;
+  }
+  
+  .associated-posts-item-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    flex: 1;
+  }
+  
+  .post-excerpt {
+    font-size: 0.875rem;
+    font-weight: 400;
+    opacity: 0.8;
+  }
+  
+  .associated-posts-block.has-background .associated-posts-item a {
+    background-color: inherit;
+  }
+  
+  .associated-posts-block.has-text-color .associated-posts-item a {
+    color: inherit;
+  }
+  
+  .associated-posts-thumbnail img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    display: block;
+  }
+  
+  @media (max-width: 600px) {
+    .associated-posts-block {
+      padding: 1.5rem;
+    }
+  
+    .associated-posts-item a {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1rem 0;
+    }
+  
+    .associated-posts-thumbnail {
+      width: 100%;
+    }
+  
+    .associated-posts-thumbnail img {
+      width: 100%;
+      height: auto;
+    }
+  
+    .associated-posts-item .post-title {
+      font-size: 1.1rem;
+    }
+  
+    .associated-posts-item-inner {
+      width: 100%;
+    }
+  }
+  
